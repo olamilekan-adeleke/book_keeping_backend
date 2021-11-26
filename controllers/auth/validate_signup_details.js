@@ -25,7 +25,7 @@ validateSignupDetails = (data) => {
   if (phone === undefined || phone.length < 11) {
     throw {
       code: 400,
-      msg: "Must be more than 10 characters!!!",
+      msg: "Phone number must be more than 10 characters!!!",
     };
   }
 };
