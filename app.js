@@ -1,5 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
+const authRoutes = require("../../controllers/auth/auth_routes");
+const notFoundRoutes = require("../../controllers/not_found/not_found_routes");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -16,7 +18,6 @@ app.use("/auth", authRoutes);
 
 // not found
 app.use("/", notFoundRoutes);
-
 
 // start server
 const port = process.env.PORT || 8080;
