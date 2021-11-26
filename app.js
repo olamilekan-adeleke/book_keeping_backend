@@ -11,9 +11,12 @@ app.use(morgan("dev"));
 
 // routes...
 
-app.get("/", (req, res) => {
-  res.send("server is running");
-});
+// authentication
+app.use("/auth", authRoutes);
+
+// not found
+app.use("/", notFoundRoutes);
+
 
 // start server
 const port = process.env.PORT || 8080;
