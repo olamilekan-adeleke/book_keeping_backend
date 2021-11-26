@@ -1,10 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
-const authRoutes = require("../../controllers/auth/auth_routes");
-const notFoundRoutes = require("../../controllers/not_found/not_found_routes");
-
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config();
+const authRoutes = require("./routes/auth/auth_routers");
+const notFoundRoutes = require("./routes/not_found/not_found");
 
 // middle-wares
 const app = express();
